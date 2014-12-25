@@ -1,3 +1,5 @@
 [config]
 command = deploy.cmd
-project = www
+
+[config]
+project = ./www
