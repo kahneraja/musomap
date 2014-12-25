@@ -26,3 +26,7 @@ A more flexible working environment to develop new ideas and release improvement
 ## Tools
 
 - Genymotion
+
+## References
+
+https://blog.nraboy.com/2014/07/use-polymer-apache-cordova/
