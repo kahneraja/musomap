@@ -2,7 +2,7 @@
   "name": "Musomap",
   "version": "2.0.0",
   "description": "The global map of musicians.",
-  "devDependencies": {
+  "dependencies": {
     "grunt": "^0.4.5",
     "grunt-connect": "^0.2.0"
   }
