@@ -5,3 +5,4 @@ hooks
 bower_components
 azure.err
 .config
+.log
