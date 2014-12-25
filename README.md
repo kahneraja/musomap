@@ -19,13 +19,25 @@ A more flexible working environment to develop new ideas and release improvement
 
 ## Web & App Stack
 
-- Polymer Web Components
-- Cordova
+- HTML (Jade).
+- Polymer Web Components.
+- Cordova hybrid mobile packaging.
+- Mongoose json data store.
+
+## Infrastructure
+
+- NodeJS (Express)
 - MongoDB
 
 ## Tools
 
 - Genymotion
+- Robomongo
+
+## Partners
+
+- Azure
+- Mongolabs
 
 ## References
 
