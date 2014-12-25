@@ -1,0 +1,10 @@
+{
+  "name": "Musomap",
+  "version": "2.0.0",
+  "description": "The global map of musicians.",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-connect": "^0.2.0",
+    "grunt-cordova-cli": "^0.1.0"
+  }
+}
