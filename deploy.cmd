@@ -74,8 +74,10 @@ IF DEFINED KUDU_SELECT_NODE_VERSION_CMD (
   )
 
   SET NPM_CMD="!NODE_EXE!" "!NPM_JS_PATH!"
+  SET BOWER_CMD="!BOWER_EXE!" "!BOWER_JS_PATH!"
 ) ELSE (
   SET NPM_CMD=npm
+  SET BOWER_CMD=bower
   SET NODE_EXE=node
 )
 
@@ -95,7 +97,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 )
 
 :: 2. Select node version
-# call :SelectNodeVersion
+:: call :SelectNodeVersion
 
 :: 3. Install npm packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
@@ -105,14 +107,12 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   popd
 )
 
-# 4. Install bower packages
+:: 4. Install bower packages
 if [ -e "$DEPLOYMENT_TARGET/bower.json" ]; then
-  cd "$DEPLOYMENT_TARGET"
-  eval $NPM_CMD install bower
-  exitWithMessageOnError "installing bower failed"
-  ./node_modules/.bin/bower install
-  exitWithMessageOnError "bower failed"
-  cd - > /dev/null
+  pushd "%DEPLOYMENT_TARGET%"
+  call :ExecuteCmd !BOWER_CMD! install
+  IF !ERRORLEVEL! NEQ 0 goto error
+  popd
 fi
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
