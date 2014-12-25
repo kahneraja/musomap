@@ -1,8 +1,8 @@
 {
   "name": "musomap",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "authors": [
-    "Kahne Raja <kahneraja@gmail.com>"
+    "Kahne Raja"
   ],
   "license": "MIT",
   "ignore": [
