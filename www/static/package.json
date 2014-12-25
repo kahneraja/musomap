@@ -1,0 +1,10 @@
+{
+  "name": "Musomap",
+  "version": "2.0.0",
+  "description": "The global map of musicians.",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "bower": "^1.3.9",
+  }
+}
