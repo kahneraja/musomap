@@ -22,7 +22,7 @@ setlocal enabledelayedexpansion
 
 SET ARTIFACTS=%~dp0%..\artifacts
 
-SET DEPLOYMENT_SOURCE=%~dp0%\www
+SET DEPLOYMENT_SOURCE=%~dp0%\www\express
 
 IF NOT DEFINED DEPLOYMENT_SOURCE (
   SET DEPLOYMENT_SOURCE=%~dp0%.
