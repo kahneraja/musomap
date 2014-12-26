@@ -109,7 +109,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 
 :: 4. Install bower components
 IF EXIST "%DEPLOYMENT_TARGET%\bower.json" (
-  pushd "%DEPLOYMENT_TARGET%"\public
+  pushd "%DEPLOYMENT_TARGET%"
   call :ExecuteCmd bower install
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
